@@ -23,6 +23,9 @@ def update
   redirect_to post_path(@post)
 end
 
+	def edit
+	  @post = Post.find(params[:id])
+	end
 
  
   private 
@@ -31,4 +34,4 @@ end
     params.require(:post).permit(*args)
   end 
 
-
+end
